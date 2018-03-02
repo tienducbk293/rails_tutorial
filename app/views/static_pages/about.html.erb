@@ -1,0 +1,21 @@
+<% provide:title, t(".title") %>
+<h1><%= t".h1" %></h1>
+<p>
+  The
+  <%= link_to "http://www.railstutorial.org/" do %>
+    <%= content_tag :em, t(".content1") %>
+  <% end %>
+  is a
+  <%= link_to "http://www.railstutorial.org/book" do %>
+    <%= t".content2" %>
+  <% end %>
+  and
+  <%= link_to "http://screencasts.railstutorial.org/" do %>
+    <%= t".content3" %>
+  <% end %>
+  to teach web development with
+  <%= link_to "http://rubyonrails.org/" do %>
+    <%= t".content4" %>
+  <% end %>.
+  This is the sample application for the tutorial.
+</p>
