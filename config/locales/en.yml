@@ -39,17 +39,26 @@ en:
     home:
       title: "Home"
       h1: "Sample App"
+      p1: "This is the home page for the"
+      p2: "sample application."
       content: "Ruby on Rails Tutorial"
 
     help:
       title: "Help"
       h1: "Help"
+      p1: "Get help on the Ruby on Rails Tutorial at the"
+      p2: "To get help on this sample app, see the"
       content1: "Rails Tutorial help section"
       content2: "Ruby on Rails Tutorial"
     
     about:
       title: "About"
       h1: "About"
+      p1: "The"
+      p2: "is a"
+      p3: "and"
+      p4: "to teach web development with"
+      p5: "This is the sample application for the tutorial."
       content1: "Ruby on Rails Tutorial"
       content2: "book"
       content3: "screencast series"
@@ -58,4 +67,5 @@ en:
     contact:
       title: "Contact"
       h1: "Contact"
+      p1: "Contact the Ruby on Rails Tutorial about the sample app at the"
       content: "contact page"
