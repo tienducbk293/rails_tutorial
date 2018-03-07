@@ -33,7 +33,7 @@ en:
   hello: "Hello world"
   layouts:
     application:
-      title: " | Ruby on Rails Tutorial Sample App"
+      title: "Ruby on Rails Tutorial Sample App"
 
   static_pages:
     home:
@@ -50,7 +50,7 @@ en:
       p2: "To get help on this sample app, see the"
       content1: "Rails Tutorial help section"
       content2: "Ruby on Rails Tutorial"
-    
+
     about:
       title: "About"
       h1: "About"
