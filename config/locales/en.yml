@@ -35,13 +35,29 @@ en:
     application:
       title: "Ruby on Rails Tutorial Sample App"
 
+    header:
+      content1: "sample app"
+      content2: "Home"
+      content3: "Help"
+      content4: "Log in"
+
+    footer:
+      sm1: "The"
+      sm2: "by"
+      content1: "Ruby on Rails Tutorial"
+      content2: "Michael Hartl"
+      content3: "About"
+      content4: "Contact"
+      content5: "News"
+
   static_pages:
     home:
       title: "Home"
-      h1: "Sample App"
-      p1: "This is the home page for the"
-      p2: "sample application."
-      content: "Ruby on Rails Tutorial"
+      h1: "Welcome to the Sample App"
+      h2_1: "This is the home page for the"
+      h2_2: "sample application."
+      content1: "Ruby on Rails Tutorial"
+      content2: "Sign up now!"
 
     help:
       title: "Help"
@@ -69,3 +85,9 @@ en:
       h1: "Contact"
       p1: "Contact the Ruby on Rails Tutorial about the sample app at the"
       content: "contact page"
+
+  users:
+    new:
+      title: "Sign up"
+      h1: "Sign up"
+      p: "This will be a signup page for new users."
