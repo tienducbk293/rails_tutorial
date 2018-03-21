@@ -31,6 +31,8 @@
 
 en:
   hello: "Hello world"
+  welcome: "Welcome to the Sample App"
+  error_user: "User not found"
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
@@ -53,7 +55,6 @@ en:
   static_pages:
     home:
       title: "Home"
-      h1: "Welcome to the Sample App"
       h2_1: "This is the home page for the"
       h2_2: "sample application."
       content1: "Ruby on Rails Tutorial"
@@ -89,5 +90,10 @@ en:
   users:
     new:
       title: "Sign up"
-      h1: "Sign up"
-      p: "This will be a signup page for new users."
+      confirm: "Confirmation"
+      submit: "Create my account"
+
+  shared:
+    error_messages:
+      content: "The form contains"
+      error: "error"
