@@ -32,6 +32,8 @@ RemoveUnusedMethodsInControllersCheck: {
     UsersController#new,
     UsersController#show,
     UsersController#create,
+    SessionsController#create,
+    SessionsController#destroy,
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
