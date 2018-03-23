@@ -4,7 +4,15 @@ module SessionsHelper
   end
 
   def current_user
-    @current_user ||= User.find_by id: session[:user_id]
+    if user_id = session[:user_id]
+      @current_user ||= User.find_by id: user_id
+    elsif cookies_id = cookies.signed[:user_id]
+      user = User.find_by id: cookies_id
+      if user && user.authenticated?(cookies[:remember_token])
+        log_in user
+        @current_user = user
+      end
+    end
   end
 
   def logged_in?
@@ -13,10 +21,25 @@ module SessionsHelper
 
   def log_out
     session.delete :user_id
+    cookies.delete :user_id
     @current_user = nil
   end
 
-  def params_session
-    params[:session]
+  def forget user
+    user.forget
+    cookies.delete :user_id
+    cookies.delete :remember_token
+  end
+
+  def remember user
+    user.remember
+    cookies_permanent.signed[:user_id] = user.id
+    cookies_permanent[:remember_token] = user.remember_token
+  end
+
+  private
+
+  def cookies_permanent
+    cookies.permanent
   end
 end

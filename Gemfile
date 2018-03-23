@@ -14,7 +14,7 @@ gem "jbuilder", "2.7.0"
 
 group :development, :test do
   gem "sqlite3", "1.3.13"
-  gem "byebug", "9.0.6", platform: :mri
+  gem "byebug"
   gem "database_cleaner"
   gem "brakeman", require: false
   gem "jshint"
@@ -28,6 +28,13 @@ group :development, :test do
   gem "reek"
   gem "railroady"
   gem "autoprefixer-rails"
+end
+
+group :development do
+  gem "web-console", ">= 3.3.0"
+  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "spring"
+  gem "spring-watcher-listen", "~> 2.0.0"
 end
 
 group :test do
