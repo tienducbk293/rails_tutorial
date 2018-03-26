@@ -30,14 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello World"
   welcome: "Welcome to the Sample App"
   error_user: "User not found"
   danger: "Invalid email/password combination"
+  profile_update: "Profile updated"
+  please_login: "Please log in."
+  user_destroy: "User deleted"
+
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
-
     header:
       sample: "sample app"
       home: "Home"
@@ -48,7 +51,6 @@ en:
       setting: "Settings"
       logout: "Log out"
       account: "Account"
-
     footer:
       sm1: "The"
       sm2: "by"
@@ -65,7 +67,6 @@ en:
       h2_2: "sample application."
       content1: "Ruby on Rails Tutorial"
       content2: "Sign up now!"
-
     help:
       title: "Help"
       h1: "Help"
@@ -73,7 +74,6 @@ en:
       p2: "To get help on this sample app, see the"
       content1: "Rails Tutorial help section"
       content2: "Ruby on Rails Tutorial"
-
     about:
       title: "About"
       h1: "About"
@@ -86,7 +86,6 @@ en:
       content2: "book"
       content3: "screencast series"
       content4: "Ruby on Rails"
-
     contact:
       title: "Contact"
       h1: "Contact"
@@ -96,8 +95,18 @@ en:
   users:
     new:
       title: "Sign up"
+      create: "Create my account"
+    edit:
+      title: "Edit user"
+      update_pro: "Update your profile"
       confirm: "Confirmation"
-      submit: "Create my account"
+      save: "Save changes"
+      change: "Change"
+    index:
+      title: "All users"
+    user:
+      delete: "Delete"
+      confirm: "You sure?"
 
   shared:
     error_messages:
