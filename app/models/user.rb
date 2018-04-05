@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_reader :remember_token, :activation_token
+  attr_reader :remember_token, :activation_token, :reset_token
 
   before_save :email_downcase
   before_create :create_activation_digest
@@ -11,8 +11,6 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true,
     length: {minimum: Settings.password.minimum}, allow_nil: true
-
-  before_save :email_downcase
 
   has_secure_password
 
@@ -33,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def remember
-    self.remember_token = User.new_token
+    @remember_token = User.new_token
     update_attributes remember_digest: User.digest(remember_token)
   end
 
@@ -59,6 +57,20 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
+  def create_reset_digest
+    @reset_token = User.new_token
+    update_attributes reset_digest: User.digest(reset_token),
+      reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
   private
 
   def email_downcase
@@ -67,6 +79,6 @@ class User < ApplicationRecord
 
   def create_activation_digest
     @activation_token = User.new_token
-    self.activation_digest = User.digest(activation_token)
+    @activation_digest = User.digest(activation_token)
   end
 end
